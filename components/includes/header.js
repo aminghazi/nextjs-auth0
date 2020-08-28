@@ -24,19 +24,23 @@ const Header = () => (
             <style jsx>
                 {`
                     .titleSite {
-                        padding: 10px;
+                        padding: 40px 20px;
                         text-align: center;
-                        font-size: 22px;
-                        font-weight: 600;
+                        font-size: 42px;
+                        font-weight: 700;
+                        text-transform: uppercase;
                     }
                     nav {
                         text-align: center;
-                        background-color: #e2e2e2;
+                        background-color: #f1f1f1;
                         padding: 15px;
                     }
                     nav a {
                         padding: 15px 15px;
                         text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 100;
                     }
                     nav a:hover {
                         background-color: #ffffff;
