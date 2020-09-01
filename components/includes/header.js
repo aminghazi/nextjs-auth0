@@ -1,8 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Header = () => (
-    <>
+
+
+
+const Header = () => {
+    const { loginWithRedirect } = useAuth0();
+
+    return (
+        <>
         <header>
             <div className="titleSite">
                 Nextjs Auth
@@ -19,6 +26,10 @@ const Header = () => (
                 </Link>
                 <Link href="/users">
                     <a>Users</a>
+                </Link>
+                <button onClick={() => loginWithRedirect()}>Log In</button>
+                <Link href="/users">
+                    <a>Logout</a>
                 </Link>
             </nav>
             <style jsx>
@@ -49,6 +60,7 @@ const Header = () => (
             </style>
         </header>
     </>
-)
+    )
+}
 
 export default Header;
